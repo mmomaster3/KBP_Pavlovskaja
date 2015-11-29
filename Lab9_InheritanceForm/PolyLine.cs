@@ -9,6 +9,7 @@ namespace Lab9_InheritanceForm
     class PolyLine : Line
     {
         int z;
+
         public PolyLine(int x, int y, int z):base(x,y)
         {
             Z = z;

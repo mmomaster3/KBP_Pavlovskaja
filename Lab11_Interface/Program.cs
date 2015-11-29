@@ -6,72 +6,58 @@ using System.Threading.Tasks;
 
 namespace Lab11_Interface
 {
+    interface IDishes
+    {
+        string clear(byte clear);
+    }
+
+    interface IDrinkabe : IDishes
+    {
+        string drink(byte drink);
+    }
+
+    public class TeaCup : IDrinkabe
+    {
+        public string drink(byte drink)
+        {
+            switch (drink)
+            {
+                case 1: return "Будем пить ";
+                case 2: return "Мы не пьем ";
+            }
+            throw new Exception("Вы сделали не правельный выбор!".ToString());
+        }
+
+        public string clear(byte clear)
+        {
+            switch (clear)
+            {
+                case 1: return "из мытой посуды";
+                case 2: return "из не мытой посуды.";
+            }
+            throw new Exception("Вы сделали не правельный выбор!".ToString());
+        }
+
+        public string pig()
+        { return " Поздравляю вы свинья!"; }
+    }
+
     class Program
     {
-        interface IPoint
-        {
-            int x
-            {
-                get;
-                set;
-            }
-
-            int y
-            {
-                get;
-                set;
-            }
-        }
-
-        class Point : IPoint
-        {
-            private int _x;
-            private int _y;
-
-            public Point(int x, int y)
-            {
-                _x = x;
-                _y = y;
-            }
-
-            public int x
-            {
-                get
-                {
-                    return _x;
-                }
-
-                set
-                {
-                    _x = value;
-                }
-            }
-
-            public int y
-            {
-                get
-                {
-                    return _y;
-                }
-                set
-                {
-                    _y = value;
-                }
-            }
-        }
-
         class MainClass
         {
-            static void PrintPoint(IPoint p)
-            {
-                Console.WriteLine("x={0}, y={1}", p.x, p.y);
-            }
-
             static void Main()
             {
-                Point p = new Point(2, 3);
-                Console.Write("My Point: ");
-                PrintPoint(p);
+                Console.WriteLine("1-Будем мыть посуду\n2-Не будем мыть посуду");
+                byte clear = byte.Parse(Console.ReadLine());
+                Console.WriteLine("1-Будем пить\n2-Не будем пить");
+                byte drink = byte.Parse(Console.ReadLine());
+
+                TeaCup cup = new TeaCup();
+
+                Console.Write(cup.drink(drink) + cup.clear(clear));
+                Console.Write(clear == 2 ? cup.pig() : "");
+                Console.ReadLine();
             }
         }
     }

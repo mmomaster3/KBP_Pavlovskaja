@@ -55,5 +55,10 @@ namespace Lab9_InheritanceForm
             Pen.Dispose();
             formGraphics.Dispose();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

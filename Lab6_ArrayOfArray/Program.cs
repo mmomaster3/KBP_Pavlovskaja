@@ -37,7 +37,7 @@ namespace Lab6_ArrayOfArray
         }
         public static double mid(ref double[,] a, int n, int m)
         {
-            Console.WriteLine("-------------------------------------------------------------------------");
+            Console.WriteLine(new string ('-', 60));
             Console.WriteLine("Введите велечину: ");
             double k = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine();
