@@ -24,8 +24,9 @@ namespace Lab11_Interface
             {
                 case 1: return "Будем пить ";
                 case 2: return "Мы не пьем ";
+                default: return "Ошибка ввода!";
             }
-            throw new Exception("Вы сделали не правельный выбор!".ToString());
+
         }
 
         public string clear(byte clear)
@@ -34,8 +35,9 @@ namespace Lab11_Interface
             {
                 case 1: return "из мытой посуды";
                 case 2: return "из не мытой посуды.";
+                default: return "Ошибка ввода!";
             }
-            throw new Exception("Вы сделали не правельный выбор!".ToString());
+
         }
 
         public string pig()
