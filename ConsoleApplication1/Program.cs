@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Program
+    class MyClient
     {
-        static void Main(string[] args)
+        unsafe public static void Main()
         {
-            try
+            int[] iArray = new int[10];
+            for (int count = 0; count < 10; count++)
             {
-                string message = Console.ReadLine();
-                if (message.Length > 6)
+                iArray[count] = count * count;
+            }
+            fixed (int* ptr = iArray)
+            {
+                for (int i = 0; i < 14; i++)
                 {
-                    throw new Exception("Длина строки больше 6 символов");
+                    Console.WriteLine(*(ptr + i));
                 }
+                Console.ReadLine();
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Ошибка: " + e.Message);
-            }
-            Console.ReadLine();
-        }
+        }  
     }
 }

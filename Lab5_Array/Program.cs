@@ -8,7 +8,7 @@ namespace Lab5_Array
 {
     class Program
     {
-        static void Main(string[] args)
+        unsafe static void Main(string[] args)
         {
 
             int summ = 0;
@@ -30,8 +30,10 @@ namespace Lab5_Array
                 }
 
                 if (Math.Abs(arr[i]) < comm) comm = Math.Abs(arr[i]);
-                Console.Write(arr[i] + "  ");
-            }
+                
+                fixed(int *ptr = arr)
+                Console.Write((*(ptr + i)) + "  ");
+            }     
             Console.WriteLine("\n \nМин. эл-т по Abs: " + comm);
             Console.WriteLine("Сумма abs массива: " + summ);
             Console.WriteLine("\nВведите интервал:");
@@ -54,24 +56,6 @@ namespace Lab5_Array
                         int x = arr[j - 1]; arr[j - 1] = arr[j]; arr[j] = x;
                     }
                 }
-
-                /*  if (arr[i] == 0)
-                  {
-                      if (arr[i] != arr[n-1])
-                      {
-                          if (arr[i + 1] != 0)
-                          {
-                              buff = arr[i + 1];
-                              arr[i + 1] = arr[i];
-                              arr[i] = buff;
-                          } else
-                          {
-                              buff = arr[i + 2];
-                              arr[i + 2] = arr[i+1];
-                              arr[i+1] = buff;
-                          }
-                      }
-                  }*/
                 Console.Write(arr[i] + "  ");
             }
             //

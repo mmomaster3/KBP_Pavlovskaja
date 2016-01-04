@@ -9,13 +9,21 @@ namespace Lab10_Struct
 {
     class Program
     {
-        public struct MARSH
+        public struct MARSH : IComparable
         {
             public string beginPoint {
                 get;
                 set; }
             public string endPoint;
             public int routeNumber;
+
+            public int CompareTo(object obj)
+            {
+                var tmp = (MARSH)obj;
+                if (this.routeNumber > tmp.routeNumber) return 1;
+                if (this.routeNumber < tmp.routeNumber) return -1;
+                return 0;
+            }
         }
 
         static void Main(string[] args)
@@ -28,7 +36,8 @@ namespace Lab10_Struct
                 list.Add(new MARSH() { beginPoint = tmp[0], endPoint = tmp[1], routeNumber = int.Parse(tmp[2]) });
             }
 
-            list.OrderBy(n => n.routeNumber);
+            //list.OrderBy(n => n.routeNumber);
+            list.Sort();
 
             Console.WriteLine("Отсортированный: ");
             foreach (MARSH m in list)

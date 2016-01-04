@@ -39,8 +39,8 @@ namespace Lab3_Ex3_Taylor
                     n++;
 
                 }
-                arth = 0.5 * Math.Log((1 + x) / (1 - x));
-                Console.WriteLine("|" + "   X={0,5:f}" + "  |" + " Arth ={1,5:f}" + "|", result, arth);
+          //      arth = 0.5 * Math.Log((1 + x) / (1 - x));
+                Console.WriteLine("|" + "   X={0,5:f}" + "  |" + " Arth ={1,5:f}" + "|", x,result);
 
             }
 

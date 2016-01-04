@@ -22,7 +22,7 @@ namespace Lab11_Interface
         {
             switch (drink)
             {
-                case 1: return "Будем пить ";
+                case 1: return "Будем пить";
                 case 2: return "Мы не пьем ";
                 default: return "Ошибка ввода!";
             }
