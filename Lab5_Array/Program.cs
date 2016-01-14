@@ -17,22 +17,21 @@ namespace Lab5_Array
             Console.Write("Введите кол-во эл-ов массива: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
-            int[] arr = new int[n];
+            int* arr = stackalloc int[n];
+            int* p = arr;
             Random r = new Random();
             Console.WriteLine("Исходный массив:");
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < n; i++)
             {
-                arr[i] = r.Next(-100, 100);
-                if (arr[i] < 0 || flag == true)
+                p[i] = r.Next(-100, 100);
+                if (p[i] < 0 || flag == true)
                 {
-                    summ += Math.Abs(arr[i]);
+                    summ += Math.Abs(p[i]);
                     flag = true;
                 }
 
-                if (Math.Abs(arr[i]) < comm) comm = Math.Abs(arr[i]);
-                
-                fixed(int *ptr = arr)
-                Console.Write((*(ptr + i)) + "  ");
+                if (Math.Abs(p[i]) < comm) comm = Math.Abs(p[i]);
+                Console.Write(p[i] + "  ");
             }     
             Console.WriteLine("\n \nМин. эл-т по Abs: " + comm);
             Console.WriteLine("Сумма abs массива: " + summ);
@@ -41,19 +40,19 @@ namespace Lab5_Array
             int str = Convert.ToInt32(Console.ReadLine());
             Console.Write("до:");
             int fin = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < n; i++)
             {
-                if (arr[i] >= str && arr[i] <= fin) arr[i] = 0;
+                if (p[i] >= str && p[i] <= fin) p[i] = 0;
             }
             Console.WriteLine("\nКонечный массив: ");
             //int buff;
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < n; i++)
             {
-                for (int j = arr.Length - 1; j > i; j--)
+                for (int j = n - 1; j > i; j--)
                 {
-                    if (Math.Abs(arr[j - 1]) < Math.Abs(arr[j]))
+                    if (Math.Abs(p[j - 1]) < Math.Abs(p[j]))
                     {
-                        int x = arr[j - 1]; arr[j - 1] = arr[j]; arr[j] = x;
+                        int x = p[j - 1]; p[j - 1] = p[j]; p[j] = x;
                     }
                 }
                 Console.Write(arr[i] + "  ");
