@@ -41,8 +41,7 @@ namespace Audio
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString());
-                
+                MessageBox.Show(ex.ToString());                               
             }
             
         }
