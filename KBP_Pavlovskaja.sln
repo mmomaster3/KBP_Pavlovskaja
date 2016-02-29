@@ -43,19 +43,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{0B6C735D-B31D-4697-B9F7-D1F6CE07CE29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCX", "PCX\PCX.csproj", "{B7A621F6-678F-4BA7-81D9-BCD585F04C87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trash_PCX", "PCX\Trash_PCX.csproj", "{B7A621F6-678F-4BA7-81D9-BCD585F04C87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegEx", "RegEx\RegEx.csproj", "{42DAD51F-3306-42CB-B5DF-7178F79B165A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fractal", "Fractal\Fractal.csproj", "{1FD77FBE-C77E-4873-BF03-11FBD694A6AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trash_Fractal", "Fractal\Trash_Fractal.csproj", "{1FD77FBE-C77E-4873-BF03-11FBD694A6AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{D10B90C7-DA6A-45B2-9916-F8EB2E4EB9AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trash_Unsafe", "ConsoleApplication1\Trash_Unsafe.csproj", "{D10B90C7-DA6A-45B2-9916-F8EB2E4EB9AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delegate.csproj", "{B12DCADA-49F5-4F50-B8A7-59FE500356A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stake", "Stake\Stake.csproj", "{D0DF7461-B530-4384-B519-FE6812BC94D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrashUnsafe", "TrashUnsafe\TrashUnsafe.csproj", "{6D32E9A1-36BF-4578-BF97-E4FC43638941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trash_ToString", "Trash_ToString\Trash_ToString.csproj", "{83B3AE05-F4D1-44EB-AB56-2DBCBB8BC307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paraps_Collection", "Paraps_Collection\Paraps_Collection.csproj", "{E63E1444-5FAC-43DB-AA47-C24C538A933C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audio", "Audio\Audio.csproj", "{395736A6-60F5-4FD0-9AB8-3106B43F13CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +177,18 @@ Global
 		{6D32E9A1-36BF-4578-BF97-E4FC43638941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D32E9A1-36BF-4578-BF97-E4FC43638941}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D32E9A1-36BF-4578-BF97-E4FC43638941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B3AE05-F4D1-44EB-AB56-2DBCBB8BC307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B3AE05-F4D1-44EB-AB56-2DBCBB8BC307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B3AE05-F4D1-44EB-AB56-2DBCBB8BC307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B3AE05-F4D1-44EB-AB56-2DBCBB8BC307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E63E1444-5FAC-43DB-AA47-C24C538A933C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E63E1444-5FAC-43DB-AA47-C24C538A933C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E63E1444-5FAC-43DB-AA47-C24C538A933C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E63E1444-5FAC-43DB-AA47-C24C538A933C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395736A6-60F5-4FD0-9AB8-3106B43F13CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395736A6-60F5-4FD0-9AB8-3106B43F13CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395736A6-60F5-4FD0-9AB8-3106B43F13CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395736A6-60F5-4FD0-9AB8-3106B43F13CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

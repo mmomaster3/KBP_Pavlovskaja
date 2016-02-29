@@ -5,39 +5,64 @@ namespace Stake
 {
     class Program
     {
-        static void Main(string[] args)
+        public class Stack<T>
         {
+            int count;
 
-            Stack<int> numbers = new Stack<int>();
+            T[] items;
+            int top; 
 
-            numbers.Push(3); // в стеке 3
-            numbers.Push(5); // в стеке 5, 3
-            numbers.Push(8); // в стеке 8, 5, 3
-
-            // так как вверху стека будет находиться число 8, то оно и извлекается
-            int stackElement = numbers.Pop(); // в стеке 5, 3
-            Console.WriteLine(stackElement);
-
-            Stack<Person> persons = new Stack<Person>();
-            persons.Push(new Person() { Name = "Tom" });
-            persons.Push(new Person() { Name = "Bill" });
-            persons.Push(new Person() { Name = "John" });
-
-            foreach (Person p in persons)
+            public int Count
             {
-                Console.WriteLine(p.Name);
+                get { return count; }
+                set { if ((top > 0) && (top <= count)) count = value; else Console.WriteLine("Error!!!"); }
             }
 
-            // Первый элемент в стеке
-            Person person = persons.Pop(); // теперь в стеке Bill, Tom
-            Console.WriteLine(person.Name);
+            public void InitStack() 
+            {
+                Console.Write("Введите количество элементов стека: ");
+                count = Convert.ToInt32(Console.ReadLine());
+                items = new T[count]; 
+                top = count; 
+            }
 
-            Console.ReadLine();
+            public bool EndOfStack()
+            {
+                if (top == count) return true;
+                else return false;
+            }
+
+            public void Push(T item)
+            {
+                if (top == 0) { Console.WriteLine("Error"); return; }
+                else
+                {
+                    items[top - 1] = item;
+                    top = top - 1;
+                }
+            }
+
+            public T Pop() 
+            {
+                if (top == count) { Console.WriteLine("Error"); } else top = top + 1; return items[top - 1];
+            }
         }
-    }
 
-    class Person
-    {
-        public string Name { get; set; }
+        static void Main(string[] args)
+        {
+           
+            Stack<int> ints = new Stack<int>();
+            ints.InitStack();
+            for (int i = 0; i < ints.Count; i++)
+                ints.Push(i);
+            while (!ints.EndOfStack())
+            {
+                int x = ints.Pop();
+                Console.WriteLine(x + " ");
+            }
+
+            Console.ReadKey();
+        }
+
     }
 }

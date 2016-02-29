@@ -17,7 +17,7 @@ namespace Lab5_Array
             Console.Write("Введите кол-во эл-ов массива: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
-            int* arr = stackalloc int[n];
+            int* arr = stackalloc int[n]; //Оператор stackalloc принимает после себя массив, на который будет указывать указатель.
             int* p = arr;
             Random r = new Random();
             Console.WriteLine("Исходный массив:");
@@ -33,9 +33,9 @@ namespace Lab5_Array
                 if (Math.Abs(p[i]) < comm) comm = Math.Abs(p[i]);
                 Console.Write(p[i] + "  ");
             }     
-            Console.WriteLine("\n \nМин. эл-т по Abs: " + comm);
+            Console.WriteLine("\n \nМин. эл-т по Abs: " + comm);  //вывод мин эле-та
             Console.WriteLine("Сумма abs массива: " + summ);
-            Console.WriteLine("\nВведите интервал:");
+            Console.WriteLine("\nВведите интервал:"); // ввод интервала
             Console.Write("от:");
             int str = Convert.ToInt32(Console.ReadLine());
             Console.Write("до:");
@@ -45,7 +45,7 @@ namespace Lab5_Array
                 if (p[i] >= str && p[i] <= fin) p[i] = 0;
             }
             Console.WriteLine("\nКонечный массив: ");
-            //int buff;
+            //вывод конецного массива
             for (int i = 0; i < n; i++)
             {
                 for (int j = n - 1; j > i; j--)
