@@ -6,10 +6,59 @@ using System.Threading.Tasks;
 
 namespace Lab5_Array
 {
+    class das
+    {
+        const int d = 2;
+        static int s = 4;
+        public int i = 2;
+        int t = 3;
+
+        public static int D
+        {
+            get
+            {
+                return d;
+            }
+        }
+
+        public static int S
+        {
+            get
+            {
+                return s;
+            }
+
+            set
+            {
+                s = value;
+            }
+        }
+
+        public int T
+        {
+            get
+            {
+                return t;
+            }
+
+            set
+            {
+                t = value;
+            }
+        }
+    }
+
     class Program
     {
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
         unsafe static void Main(string[] args)
         {
+            das dsasd = new das();
+            
 
             int summ = 0;
             int comm = Int32.MaxValue;
